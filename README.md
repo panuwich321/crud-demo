@@ -5,4 +5,4 @@
 * H2
 * JPA
 * Hateoas
-* lombok
+* Lombok
