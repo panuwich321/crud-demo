@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Product insert/update</title>
+    <style>
+        h1, p {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<h1>Insert/Update</h1>
+<p>
+<form action="#" th:action="@{/Insert/Add}" th:object="${productInsert}" method="POST">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Product No</span>
+        </div>
+        <div class="col-xs-4">
+            <input type="number" class="form-control" name="no" th:field="*{productno}"/>
+        </div>
+        <br>
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Product ID</span>
+        </div>
+        <div class="col-xs-4">
+            <input type="text" class="form-control" name="id" th:field="*{productid}"/>
+        </div>
+        <br>
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Product Name</span>
+        </div>
+        <div class="col-xs-4">
+            <input type="text" class="form-control" name="name" th:field="*{productname}"/>
+        </div>
+        <br>
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Product Price(Baht)</span>
+        </div>
+        <div class="col-xs-4">
+            <input type="number" class="form-control" name="price" th:field="*{productprice}"/>
+        </div>
+        <br>
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Product Quantity</span>
+        </div>
+        <div class="col-xs-4">
+            <input type="number" class="form-control" name="qty" th:field="*{productqty}"/>
+        </div>
+        <br>
+    </div>
+    <input class="btn btn-warning" type="submit" value="Insert"/>
+</form>
+<p>
+<form action="#" th:action="@{/}" th:object="${productInsert}" method="get">
+    <input class="btn btn-success" type="submit" value="Back to index"/>
+</form>
+</p>
+</p>
+</body>
+</html>
