@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Product delete</title>
+    <style>
+        h1, p {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<p>
+<h1>Delete by No</h1>
+<p>
+<form action="#" th:action="@{/Delete/Remove}" th:object="${productDelete}" method="POST">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Product No</span>
+        </div>
+        <div class="col-xs-4">
+            <input type="number" name="no" th:field="*{productno}"/>
+        </div>
+        <br>
+    </div>
+    <input class="btn btn-warning" type="submit" value="Delete"/>
+</form>
+<p>
+<form action="#" th:action="@{/}" th:object="${productDelete}" method="get">
+    <input class="btn btn-success" type="submit" value="Back to index"/>
+</form>
+</p>
+</p>
+</body>
+</html>
