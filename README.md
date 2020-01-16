@@ -1,5 +1,5 @@
 # **crud-demo**
-## **Tools**
+**Tools**
 * Spring-boot
 * Thymeleaf
 * H2
